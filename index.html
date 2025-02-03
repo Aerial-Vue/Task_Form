@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="AerialVue.jpg" type="image/jpg" />
+    <title>Aerial.Vue - Form Site</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="AerialVue.jpg"
+              alt="Logo"
+              width="30"
+              class="d-inline-block align-text-top"
+              style="border-radius: 50%;"
+            />
+            <strong>Aerial.Vue - Task Submission Site</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            id="offcanvasNavbar"
+            tabindex="-1"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Aerial.Vue
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-primary">
+                    <a class="nav-link active" href="#">Home</a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+      <fieldset>
+        <legend><h2>Submit Response</h2></legend>
+        <form>
+          <div class="input-group mb-3">
+            <span class="input-group-text">First and Last Name</span>
+            <input
+              type="text"
+              aria-label="First name"
+              class="form-control"
+              required
+            />
+            <input
+              type="text"
+              aria-label="Last name"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"
+              >Submit Your C Program Repository Link:</label
+            >
+            <input
+              type="url"
+              class="form-control"
+              placeholder="https://github.com/user/repo"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"
+              >Submit Your WebDev Repository Link:</label
+            >
+            <input
+              type="url"
+              class="form-control"
+              placeholder="https://github.com/user/repo"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"
+              >Submit Your WebDev Deployment Link:</label
+            >
+            <input
+              type="url"
+              class="form-control"
+              placeholder="https://user.github.io/repo"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Submit Your Python Program Link:</label>
+            <input
+              type="url"
+              class="form-control"
+              placeholder="https://github.dev/user/repo"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Submit Your LinkedIn Post Link:</label>
+            <input
+              type="url"
+              class="form-control"
+              placeholder="https://www.linkedin.com/posts/user-...."
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control"
+              id="uploadPPTX"
+              accept=".pptx"
+            />
+            <label class="input-group-text" for="uploadPPTX"
+              >Upload .pptx</label
+            >
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control"
+              id="uploadPDF"
+              accept=".pdf"
+            />
+            <label class="input-group-text" for="uploadPDF">Upload .pdf</label>
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control"
+              id="uploadImage"
+              accept=".png, .jpeg, .jpg"
+            />
+            <label class="input-group-text" for="uploadImage"
+              >Upload .png, .jpeg, .jpg</label
+            >
+          </div>
+        </form>
+      </fieldset>
+
+      <br />
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Submit
+      </button>
+      <button type="reset" class="btn btn-primary" id="resetButton">
+        Reset
+      </button>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Form Submitted</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Thank you for your submission!
+              <br />
+              Your response has been successfully recorded.
+              <br />
+              New Task Will be assigned soon.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center mt-4 p-3 bg-light">
+      <div
+        class="progress"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          id="progressBar"
+          style="width: 0%"
+        ></div>
+      </div>
+      <p class="mt-3 mb-0">&copy; All Rights Reserved to Aerial.Vue</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let progressBar = document.getElementById("progressBar");
+        let form = document.querySelector("form");
+        let inputs = form.querySelectorAll(
+          "input[required], input[type='url'], input[type='file']"
+        );
+        let resetButton = document.getElementById("resetButton");
+
+        function updateProgress() {
+          let filledFields = Array.from(inputs).filter(
+            (input) => input.value.trim() !== ""
+          ).length;
+          let totalFields = inputs.length;
+          let progress = Math.round((filledFields / totalFields) * 100);
+
+          progressBar.style.width = progress + "%";
+          progressBar.innerText = progress + "%";
+        }
+
+        inputs.forEach((input) => {
+          input.addEventListener("input", updateProgress);
+          input.addEventListener("change", updateProgress);
+        });
+
+        // Reset functionality
+        resetButton.addEventListener("click", function () {
+          form.reset(); // Reset form fields
+          progressBar.style.width = "0%"; // Reset progress bar
+          progressBar.innerText = "0%";
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
